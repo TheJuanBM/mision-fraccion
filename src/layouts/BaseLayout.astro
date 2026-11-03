@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+import { url } from '../lib/paths';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Misión Fracción: una aventura matemática para quinto de primaria. Representación, equivalencia, comparación y operaciones con fracciones."
+    />
+    <title>{title} · Misión Fracción</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <a class="brand" href={url('/')}>Misión Fracción</a>
+      <nav aria-label="Principal">
+        <a href={url('/mapa')}>Mapa</a>
+        <a href={url('/repaso')}>Repaso</a>
+        <a href={url('/reconocimiento')}>Reconocimiento</a>
+        <a href={url('/instrucciones')}>Instrucciones</a>
+      </nav>
+    </header>
+    <main id="contenido">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      Objeto Virtual de Aprendizaje · Matemáticas · grado quinto. El progreso se guarda solo en este navegador.
+    </footer>
+  </body>
+</html>

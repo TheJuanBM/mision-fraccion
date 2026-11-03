@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GameApp from '../components/game/GameApp';
+---
+
+<BaseLayout title="Mapa">
+  <div class="page">
+    <GameApp client:only="react" screen="map" />
+  </div>
+</BaseLayout>

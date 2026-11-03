@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GameApp from '../components/game/GameApp';
+---
+
+<BaseLayout title="Reconocimiento final">
+  <div class="page">
+    <GameApp client:only="react" screen="recognition" />
+  </div>
+</BaseLayout>

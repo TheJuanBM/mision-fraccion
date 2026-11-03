@@ -1,0 +1,33 @@
+{
+  "name": "mision-fraccion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "tsc --noEmit && astro build",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "Misión Fracción: una aventura matemática (OVA)",
+  "dependencies": {
+    "@astrojs/react": "^4.4.2",
+    "astro": "^5.18.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20.18.0"
+  }
+}

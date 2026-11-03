@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GameApp from '../../components/game/GameApp';
+import { MISSIONS } from '../../data/missions';
+
+// Una página estática por misión: /mision/1 … /mision/4
+export function getStaticPaths() {
+  return MISSIONS.map((m) => ({ params: { id: String(m.id) }, props: { missionId: m.id } }));
+}
+
+const { missionId } = Astro.props;
+---
+
+<BaseLayout title={`Misión ${missionId}`}>
+  <div class="page">
+    <GameApp client:only="react" screen="mission" missionId={missionId} />
+  </div>
+</BaseLayout>

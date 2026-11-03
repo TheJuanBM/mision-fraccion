@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Fracti from '../components/game/Fracti';
+import { url } from '../lib/paths';
+---
+
+<BaseLayout title="Instrucciones">
+  <div class="page">
+    <header class="page__header">
+      <Fracti size={120} mood="happy" />
+      <div>
+        <p class="eyebrow">¡Vamos!</p>
+        <h1>¿Cómo se juega?</h1>
+        <p class="fracti-says">¡Hola, explorador! Soy Fracti. Te voy a ayudar en cada misión con pistas y explicaciones.</p>
+      </div>
+    </header>
+
+    <section class="panel" aria-labelledby="pasos">
+      <h2 id="pasos">Los 6 pasos</h2>
+      <ol class="steps steps--cards">
+        <li><span class="step-num" aria-hidden="true">1</span><span><strong>Elige una misión</strong> en el mapa.</span></li>
+        <li><span class="step-num" aria-hidden="true">2</span><span><strong>Mira la explicación</strong> antes de empezar.</span></li>
+        <li><span class="step-num" aria-hidden="true">3</span><span><strong>Resuelve el reto</strong>: toca, escribe o une, según diga la actividad.</span></li>
+        <li><span class="step-num" aria-hidden="true">4</span><span><strong>Revisa tu respuesta</strong>. Si no sale, ¡no pasa nada! Puedes intentarlo las veces que quieras.</span></li>
+        <li><span class="step-num" aria-hidden="true">5</span><span><strong>Pide una pista</strong> cuando la necesites. Pedir pistas no te quita estrellas.</span></li>
+        <li><span class="step-num" aria-hidden="true">6</span><span><strong>Recupera el cristal</strong> cuando termines las 5 actividades de la misión.</span></li>
+      </ol>
+    </section>
+
+    <section class="panel" aria-labelledby="recursos">
+      <h2 id="recursos">Tus premios</h2>
+      <ul class="prize-list">
+        <li><span aria-hidden="true">★★★</span> <strong>Estrellas</strong>: 3 si lo logras a la primera, 2 si lo logras al segundo intento y 1 en los demás casos.</li>
+        <li><span aria-hidden="true">✦</span> <strong>Insignias</strong>: ganas una por cada misión completada.</li>
+        <li><span aria-hidden="true">↺</span> <strong>Repaso</strong>: puedes volver a jugar cualquier reto que ya resolviste.</li>
+      </ul>
+      <p class="notice">Los premios son del juego. No son una nota y no miden lo motivado que estás.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="controles">
+      <h2 id="controles">Cómo tocar la pantalla</h2>
+      <p>Puedes jugar con el ratón, con el teclado (<kbd>Tab</kbd> para moverte y <kbd>Enter</kbd> para elegir) o tocando la pantalla de la tableta o el celular.</p>
+      <p>En los retos de ordenar, usa las flechas ▲ y ▼. El juego no tiene sonidos que se activen solos.</p>
+    </section>
+
+    <div class="actions">
+      <a class="btn btn--primary btn--large" href={url('/mapa')}>¡Vamos al mapa!</a>
+    </div>
+  </div>
+</BaseLayout>

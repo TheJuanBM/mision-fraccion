@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Fracti from '../components/game/Fracti';
+import { url } from '../lib/paths';
+---
+
+<BaseLayout title="Portada">
+  <section class="cover">
+    <div class="cover__stars" aria-hidden="true"></div>
+    <div class="cover__content">
+      <div class="cover__guide">
+        <Fracti size={140} mood="happy" />
+      </div>
+      <p class="eyebrow">Un Objeto Virtual de Aprendizaje</p>
+      <h1 class="cover__title">Misión Fracción: una aventura matemática</h1>
+      <p class="cover__motto">«Cuatro misiones, un universo de fracciones por descubrir».</p>
+      <div class="panel cover__story">
+        <p>
+          ¡Atención, explorador! El Universo Fracción está en peligro. Cuatro cristales matemáticos han desaparecido
+          y solamente quienes logren superar los desafíos podrán recuperarlos. Para conseguirlo tendrás que descubrir,
+          representar, comparar, calcular y resolver grandes enigmas. ¿Aceptas la misión?
+        </p>
+      </div>
+      <div class="actions cover__actions">
+        <a class="btn btn--primary btn--large" href={url('/instrucciones')}>¡Acepto la misión!</a>
+        <a class="btn btn--ghost" href={url('/mapa')}>Ir directo al mapa</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

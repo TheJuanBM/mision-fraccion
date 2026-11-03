@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GameApp from '../components/game/GameApp';
+---
+
+<BaseLayout title="Repaso">
+  <div class="page">
+    <GameApp client:only="react" screen="review" />
+  </div>
+</BaseLayout>
