@@ -6,5 +6,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   output: 'static',
   integrations: [react()],
-  build: { format: 'file' },
+  // 'directory' genera /instrucciones/index.html: las URLs limpias funcionan en
+  // cualquier alojamiento estático (Vercel, GitHub Pages, Netlify…).
+  build: { format: 'directory' },
 });
